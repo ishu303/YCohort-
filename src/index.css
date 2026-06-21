@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 35% 7%;
+    --foreground: 216 20% 95%;
+    --card: 220 30% 11%;
+    --card-foreground: 216 20% 95%;
+    --popover: 220 30% 11%;
+    --popover-foreground: 216 20% 95%;
+    --primary: 225 100% 62%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 30% 11%;
+    --secondary-foreground: 216 20% 95%;
+    --muted: 220 25% 16%;
+    --muted-foreground: 215 18% 60%;
+    --accent: 225 100% 62%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.06;
+    --input: 0 0% 100% / 0.06;
+    --ring: 225 100% 62%;
+    --radius: 0.625rem;
+
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'Geist Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    background-color: #0A0E1A;
+    color: #F0F2F5;
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
